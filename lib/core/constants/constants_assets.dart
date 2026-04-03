@@ -80,7 +80,7 @@ class Assets {
 
   /// Assets for assetsSvgsLine
   /// assets/svgs/line.png
-  static const String assetsSvgsLine = "assets/svgs/line.png";
+  static const String assetsLine = "assets/svgs/line.png";
 
   /// Assets for assetsSvgsMastercard
   /// assets/svgs/Mastercard.svg

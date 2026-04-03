@@ -21,6 +21,12 @@ class ProductModel {
       description: "reversible angora cardigan",
     ),
     ProductModel(
+      image: Assets.assetsProductProduct6,
+      name: "October",
+      price: 300,
+      description: "reversible angora cardigan",
+    ),
+    ProductModel(
       image: Assets.assetsProductProduct2,
       name: "October",
       price: 100,
@@ -42,12 +48,6 @@ class ProductModel {
       image: Assets.assetsProductProduct5,
       name: "October",
       price: 200,
-      description: "reversible angora cardigan",
-    ),
-    ProductModel(
-      image: Assets.assetsProductProduct6,
-      name: "October",
-      price: 140,
       description: "reversible angora cardigan",
     ),
   ];
