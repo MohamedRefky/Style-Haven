@@ -70,6 +70,9 @@ class Assets {
   /// assets/product/product6.png
   static const String assetsProductProduct6 = "assets/product/product6.png";
 
+   static const String pinkCardigan= "assets/product/pink_cardigan.png";
+   
+
   /// Assets for assetsSvgsArrow
   /// assets/svgs/arrow.svg
   static const String assetsSvgsArrow = "assets/svgs/arrow.svg";
@@ -125,5 +128,10 @@ class Assets {
   /// Assets for assetsTextsOctober
   /// assets/texts/October.svg
   static const String assetsTextsOctober = "assets/texts/October.svg";
+
+
+ 
+
+
 }
 

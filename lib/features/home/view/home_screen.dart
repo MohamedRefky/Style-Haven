@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:style_haven/core/components/custom_appbar.dart';
 import 'package:style_haven/core/colors.dart';
 import 'package:style_haven/core/constants/constants_assets.dart';
-import 'package:style_haven/features/home/components/about_Section.dart';
+import 'package:style_haven/features/home/components/about_section.dart';
 import 'package:style_haven/features/home/components/copyright_section.dart';
 import 'package:style_haven/features/home/components/cover_section.dart';
 import 'package:style_haven/features/home/components/products_grid_section.dart';

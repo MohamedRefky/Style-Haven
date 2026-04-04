@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:style_haven/core/colors.dart';
 import 'package:style_haven/core/constants/custom_text.dart';
-import 'package:style_haven/features/check_out.dart';
+import 'package:style_haven/features/checkout/view/check_out.dart';
 import 'package:style_haven/models/product_model.dart';
 
 class ProductsGridSection extends StatelessWidget {
@@ -32,7 +32,7 @@ class ProductsGridSection extends StatelessWidget {
                   image: item.image,
                   name: item.name,
                   description: item.description,
-                  price: item.price.toString(),
+                  price: item.price,
                 ),
               ),
             );
