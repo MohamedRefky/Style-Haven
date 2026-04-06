@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:style_haven/core/utils/colors.dart';
 import 'package:style_haven/core/constants/constants_assets.dart';
 import 'package:style_haven/core/constants/custom_text.dart';
+import 'package:style_haven/core/utils/colors.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
@@ -34,7 +34,14 @@ class AboutSection extends StatelessWidget {
         Gap(20),
         Image.asset(Assets.assetsLine, width: 170),
         Gap(20),
-        CustomText(text: 'AboutSection            Contact            Blog'),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            CustomText(text: 'AboutSection'),
+            CustomText(text: 'Contact'),
+            CustomText(text: 'Blog'),
+          ],
+        ),
         Gap(30),
       ],
     );
