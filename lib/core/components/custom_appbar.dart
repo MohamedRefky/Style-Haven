@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:style_haven/core/colors.dart';
 import 'package:style_haven/core/constants/constants_assets.dart';
+import 'package:style_haven/core/utils/colors.dart';
 
 // ignore: must_be_immutable
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -27,7 +27,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
         title: SvgPicture.asset(
-          Assets.assetsLogoLogoBg,
+          Assets.assetsStyleHaven,
+          height: MediaQuery.of(context).size.height * 0.06,
+          width: MediaQuery.of(context).size.width * 0.2,
           colorFilter: ColorFilter.mode(
             isBlack ? Colors.white : AppColors.primary,
             BlendMode.srcIn,

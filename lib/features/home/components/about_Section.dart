@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:style_haven/core/colors.dart';
+import 'package:style_haven/core/utils/colors.dart';
 import 'package:style_haven/core/constants/constants_assets.dart';
 import 'package:style_haven/core/constants/custom_text.dart';
 

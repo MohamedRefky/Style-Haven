@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:style_haven/core/colors.dart';
+import 'package:style_haven/core/utils/colors.dart';
 import 'package:style_haven/core/components/cart_section.dart';
 import 'package:style_haven/core/components/custom_appbar.dart';
 import 'package:style_haven/core/components/custom_button.dart';
@@ -216,7 +216,7 @@ class _PlaceOrderScreenState extends State<PlaceOrderScreen> {
                 );
               },
             ),
-            Gap(10),
+            Gap(15),
           ],
         ),
       ),

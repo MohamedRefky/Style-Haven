@@ -41,62 +41,57 @@ class _CheckOutState extends State<CheckOut> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(isBlackK: false),
-      body: Column(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
-                children: [
-                  CustomHeader(),
-                  Gap(20),
-                  CartSection(
-                    number: number,
-                    image: widget.image,
-                    name: widget.name,
-                    description: widget.description,
-                    price: widget.price.toString(),
-                    totalPrice: (value) {
-                      setState(() {
-                        totalPrice = value;
-                      });
-                    },
-                    onChangedNumber: (value) {
-                      setState(() {
-                        number = value;
-                      });
-                    },
-                  ),
-                  Gap(20),
-                  promo(),
-                  Spacer(),
-                  TotalPrice(totalPrice: totalPrice, text: 'Est. Total'),
-                  Gap(20),
-                ],
-              ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          children: [
+            CustomHeader(),
+            Gap(20),
+            CartSection(
+              number: number,
+              image: widget.image,
+              name: widget.name,
+              description: widget.description,
+              price: widget.price.toString(),
+              totalPrice: (value) {
+                setState(() {
+                  totalPrice = value;
+                });
+              },
+              onChangedNumber: (value) {
+                setState(() {
+                  number = value;
+                });
+              },
             ),
-          ),
-          CustomButton(
-            isSvg: true,
-            text: 'Checkout',
-            svg: Assets.assetsSvgsShoppingBag,
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PlaceOrderScreen(
-                    image: widget.image,
-                    name: widget.name,
-                    description: widget.description,
-                    price: widget.price,
-                    totalPrice: totalPrice,
-                    number: number,
+            Gap(20),
+            promo(),
+            Spacer(),
+            TotalPrice(totalPrice: totalPrice, text: 'Est. Total'),
+            Gap(20),
+            CustomButton(
+              isSvg: true,
+              text: 'Checkout',
+              svg: Assets.assetsSvgsShoppingBag,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PlaceOrderScreen(
+                      image: widget.image,
+                      name: widget.name,
+                      description: widget.description,
+                      price: widget.price,
+                      totalPrice: totalPrice,
+                      number: number,
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-        ],
+                );
+              },
+            ),
+            Gap(15),
+          ],
+        ),
       ),
     );
   }

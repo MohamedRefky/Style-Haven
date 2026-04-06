@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:style_haven/core/colors.dart';
+import 'package:style_haven/core/utils/colors.dart';
 import 'package:style_haven/core/components/custom_button.dart'
     show CustomButton;
 import 'package:style_haven/core/constants/constants_assets.dart';

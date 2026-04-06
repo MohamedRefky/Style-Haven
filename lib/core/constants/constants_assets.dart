@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-  
+
   /// Assets for assetsCoverCover1
   /// assets/cover/cover1.png
   static const String assetsCoverCover1 = "assets/cover/cover1.png";
@@ -16,11 +16,13 @@ class Assets {
 
   /// Assets for assetsFontsTenorSansOFL
   /// assets/fonts/Tenor_Sans/OFL.txt
-  static const String assetsFontsTenorSansOFL = "assets/fonts/Tenor_Sans/OFL.txt";
+  static const String assetsFontsTenorSansOFL =
+      "assets/fonts/Tenor_Sans/OFL.txt";
 
   /// Assets for assetsFontsTenorSansTenorSansRegular
   /// assets/fonts/Tenor_Sans/TenorSans-Regular.ttf
-  static const String assetsFontsTenorSansTenorSansRegular = "assets/fonts/Tenor_Sans/TenorSans-Regular.ttf";
+  static const String assetsFontsTenorSansTenorSansRegular =
+      "assets/fonts/Tenor_Sans/TenorSans-Regular.ttf";
 
   /// Assets for assetsLogoLogo
   /// assets/logo/logo.png
@@ -29,6 +31,8 @@ class Assets {
   /// Assets for assetsLogoLogoBg
   /// assets/logo/logo-bg.svg
   static const String assetsLogoLogoBg = "assets/logo/logo-bg.svg";
+
+  static const String assetsStyleHaven = "assets/svgs/style_haven1.svg";
 
   /// Assets for assetsPopDone
   /// assets/pop/done.svg
@@ -70,8 +74,7 @@ class Assets {
   /// assets/product/product6.png
   static const String assetsProductProduct6 = "assets/product/product6.png";
 
-   static const String pinkCardigan= "assets/product/pink_cardigan.png";
-   
+  static const String pinkCardigan = "assets/product/pink_cardigan.png";
 
   /// Assets for assetsSvgsArrow
   /// assets/svgs/arrow.svg
@@ -128,10 +131,4 @@ class Assets {
   /// Assets for assetsTextsOctober
   /// assets/texts/October.svg
   static const String assetsTextsOctober = "assets/texts/October.svg";
-
-
- 
-
-
 }
-

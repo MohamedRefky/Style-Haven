@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:style_haven/core/colors.dart';
+import 'package:style_haven/core/utils/colors.dart';
 
 class CustomText extends StatelessWidget {
   const CustomText({

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:style_haven/core/components/custom_appbar.dart';
-import 'package:style_haven/core/colors.dart';
+import 'package:style_haven/core/utils/colors.dart';
 import 'package:style_haven/core/constants/constants_assets.dart';
 import 'package:style_haven/features/home/components/about_section.dart';
 import 'package:style_haven/features/home/components/copyright_section.dart';
