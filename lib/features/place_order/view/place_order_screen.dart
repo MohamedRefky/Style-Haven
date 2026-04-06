@@ -12,6 +12,7 @@ import 'package:style_haven/core/constants/custom_text.dart';
 import 'package:style_haven/features/add_addres/view/add_adress.dart';
 import 'package:style_haven/features/add_card/view/add_card.dart';
 import 'package:style_haven/features/place_order/components/custom_container.dart';
+import 'package:style_haven/features/place_order/components/custom_dialog.dart';
 import 'package:style_haven/features/place_order/components/shipping_adress.dart';
 import 'package:style_haven/features/place_order/components/shipping_method.dart';
 
@@ -209,92 +210,7 @@ class _PlaceOrderScreenState extends State<PlaceOrderScreen> {
                   builder: (context) {
                     return Dialog(
                       backgroundColor: Colors.white,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10,
-                          vertical: 15,
-                        ),
-                        color: Colors.white,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: Icon(
-                                Icons.close_outlined,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Gap(20),
-                            CustomText(
-                              text: 'Payment success'.toUpperCase(),
-                              size: 20,
-                              letterSpacing: 4,
-                              color: Colors.black,
-                            ),
-                            Gap(45),
-                            SvgPicture.asset(Assets.assetsPopDone),
-                            Gap(40),
-                            CustomText(
-                              text: 'Your payment was success',
-                              color: AppColors.grayScaleBody,
-                            ),
-                            Gap(8),
-                            CustomText(
-                              text: 'Payment ID : 1234567890',
-                              color: AppColors.grayScaleBody,
-                            ),
-                            Gap(20),
-                            Image.asset(
-                              Assets.assetsLine,
-                              width: 170,
-                              color: AppColors.grayScaleLabel,
-                            ),
-                            Gap(20),
-                            CustomText(
-                              text: 'Rate your purchase',
-                              color: AppColors.grayScaleBody,
-                            ),
-                            Gap(20),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(Assets.assetsPopEmogi1),
-                                Gap(10),
-                                SvgPicture.asset(Assets.assetsPopEmogi2),
-                                Gap(10),
-                                SvgPicture.asset(Assets.assetsPopEmogi3),
-                              ],
-                            ),
-                            Gap(50),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: CustomButton(
-                                    text: 'Submit',
-                                    textSize: 16,
-                                    svg: Assets.assetsSvgsShoppingBag,
-                                    onTap: () {},
-                                    isSvg: false,
-                                  ),
-                                ),
-                                Gap(8),
-                                Expanded(
-                                  child: CustomButton(
-                                    color: Colors.white,
-                                    text: 'Back to home',
-                                    textSize: 16,
-                                    textColor: Colors.black,
-                                    svg: Assets.assetsSvgsShoppingBag,
-                                    onTap: () {},
-                                    isSvg: false,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
+                      child: CustomDialog(),
                     );
                   },
                 );
