@@ -5,8 +5,8 @@ import 'package:style_haven/core/colors.dart';
 import 'package:style_haven/core/constants/constants_assets.dart';
 import 'package:style_haven/core/constants/custom_text.dart';
 
-class CartWidget extends StatefulWidget {
-  const CartWidget({
+class CartSection extends StatefulWidget {
+  const CartSection({
     super.key,
     required this.image,
     required this.name,
@@ -14,18 +14,28 @@ class CartWidget extends StatefulWidget {
     required this.price,
     required this.totalPrice,
     required this.onChangedNumber,
+    required this.number,
   });
   final String image, name, description, price;
-
+  final int number;
   final Function(int) totalPrice;
   final Function(int) onChangedNumber;
 
   @override
-  State<CartWidget> createState() => _CartWidgetState();
+  State<CartSection> createState() => _CartSectionState();
 }
 
-class _CartWidgetState extends State<CartWidget> {
-  int number = 1;
+class _CartSectionState extends State<CartSection> {
+  late int number;
+
+  @override
+  void initState() {
+    super.initState();
+    number = 1;
+    number = widget.number;
+   
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;

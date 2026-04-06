@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:style_haven/core/components/cart_widget.dart';
+import 'package:style_haven/core/components/cart_section.dart';
 import 'package:style_haven/core/components/custom_appbar.dart';
 import 'package:style_haven/core/components/custom_button.dart';
 import 'package:style_haven/core/components/custom_header.dart';
 import 'package:style_haven/core/components/total_price.dart';
 import 'package:style_haven/core/constants/constants_assets.dart';
-import 'package:style_haven/features/place_order/view/place_order_screen.dart';
 import 'package:style_haven/features/checkout/widget/promo_widget.dart';
+import 'package:style_haven/features/place_order/view/place_order_screen.dart';
 
 class CheckOut extends StatefulWidget {
   const CheckOut({
@@ -28,11 +28,12 @@ class CheckOut extends StatefulWidget {
 
 class _CheckOutState extends State<CheckOut> {
   late int totalPrice;
-   int number = 1;
+  int number = 1;
 
   @override
   void initState() {
     totalPrice = widget.price;
+
     super.initState();
   }
 
@@ -49,7 +50,8 @@ class _CheckOutState extends State<CheckOut> {
                 children: [
                   CustomHeader(),
                   Gap(20),
-                  CartWidget(
+                  CartSection(
+                    number: number,
                     image: widget.image,
                     name: widget.name,
                     description: widget.description,
@@ -68,7 +70,7 @@ class _CheckOutState extends State<CheckOut> {
                   Gap(20),
                   promo(),
                   Spacer(),
-                  TotalPrice(totalPrice: totalPrice, text: 'Est. Total',),
+                  TotalPrice(totalPrice: totalPrice, text: 'Est. Total'),
                   Gap(20),
                 ],
               ),

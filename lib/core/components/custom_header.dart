@@ -4,9 +4,10 @@ import 'package:style_haven/core/constants/constants_assets.dart';
 import 'package:style_haven/core/constants/custom_text.dart';
 
 class CustomHeader extends StatelessWidget {
-  const CustomHeader({super.key, this.text, this.size});
+  const CustomHeader({super.key, this.text, this.size, this.letterSpacing});
   final String? text;
   final double? size;
+  final double? letterSpacing;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,7 +18,7 @@ class CustomHeader extends StatelessWidget {
             text: text ?? 'Checkout'.toUpperCase(),
             color: Colors.black,
             size: size ?? 26,
-            letterSpacing: 4,
+            letterSpacing: letterSpacing ?? 4,
           ),
         ),
         Gap(10),

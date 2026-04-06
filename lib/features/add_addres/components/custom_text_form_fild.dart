@@ -13,47 +13,34 @@ class CustomTextFormFild extends StatelessWidget {
   final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
-   
-    return DismissKeyboard(
-      child: SizedBox(
-        width: width ?? double.infinity,
-        child: TextFormField(
-      
-          controller: controller,
-          style: TextStyle(color: Colors.black),
-          cursorColor: Colors.black,
-          onTapOutside: (event) {
-            FocusManager.instance.primaryFocus?.unfocus();
-          },
-          onEditingComplete: () {
-            FocusScope.of(context).nextFocus();
-          },
-      
-          decoration: InputDecoration(
-            label: CustomText(text: text, color: Color(0xFF979797), size: 17),
-            focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-            ),
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey),
-            ),
+    return SizedBox(
+      width: width ?? double.infinity,
+      child: TextFormField(
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Please enter yuor data';
+          }
+          return null;
+        },
+        controller: controller,
+        style: TextStyle(color: Colors.black),
+        cursorColor: Colors.black,
+        onTapOutside: (event) {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        onEditingComplete: () {
+          FocusScope.of(context).nextFocus();
+        },
+        decoration: InputDecoration(
+          hint: CustomText(text: text, color: Color(0xFF979797), size: 17),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.black),
+          ),
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey),
           ),
         ),
       ),
     );
-  }
-}
-class DismissKeyboard extends StatelessWidget {
-  final Widget child;
-
-  const DismissKeyboard({super.key, required this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      FocusManager.instance.primaryFocus?.unfocus();
-    });
-
-    return child;
   }
 }

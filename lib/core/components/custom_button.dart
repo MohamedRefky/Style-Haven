@@ -10,26 +10,42 @@ class CustomButton extends StatelessWidget {
     required this.svg,
     required this.onTap,
     required this.isSvg,
+    this.width,
+    this.color,
+    this.textSize,
+    this.textColor,
   });
   final String text;
   final String svg;
   final Function() onTap;
   final bool isSvg;
+  final double? width;
+  final Color? color;
+  final double? textSize;
+  final Color? textColor;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: double.infinity,
-        color: Colors.black,
+        width: width ?? double.infinity,
+        color: color ?? Colors.black,
+        // decoration: BoxDecoration(
+        //  border: Border.all(color: Colors.black),
+        // ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15),
+          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 2),
+          
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               isSvg ? SvgPicture.asset(svg) : const Gap(0),
-              Gap(20),
-              CustomText(text: text.toUpperCase(), size: 20),
+              isSvg ? Gap(20) : SizedBox.shrink(),
+              CustomText(
+                text: text.toUpperCase(),
+                size: textSize ?? 16,
+                color: textColor ?? Colors.white,
+              ),
             ],
           ),
         ),
