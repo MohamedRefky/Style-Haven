@@ -28,8 +28,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         title: SvgPicture.asset(
           Assets.assetsStyleHaven,
-          height: MediaQuery.of(context).size.height * 0.06,
-          width: MediaQuery.of(context).size.width * 0.2,
+          height: MediaQuery.of(context).size.height * 0.052,
+          width: MediaQuery.of(context).size.width * 0.1,
           colorFilter: ColorFilter.mode(
             isBlack ? Colors.white : AppColors.primary,
             BlendMode.srcIn,
